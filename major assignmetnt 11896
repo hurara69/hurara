@@ -1,0 +1,233 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+
+class scientificcalculator{
+	private:
+			float x,y;
+	float PI=3.14;
+	int choice;
+	
+	public:
+		void userinterface()
+		{
+			
+				cout<<"\n\t------------------------------------\n";
+	cout<<"\t            Calculator            \n";
+	cout<<"\t-------------------------------------\n";
+	cout<<"\t1:Addition\t\t"<<" 8:Sin"<<endl;
+	cout<<"\t2:Subtraction\t\t"<<" 9:Cos"<<endl;
+	cout<<"\t3:Multiplication\t"<<" 10:Tan"<<endl;
+	cout<<"\t4:Division\t\t"<<" 11:Inverse of Sin"<<endl;
+	cout<<"\t5:Exponent\t\t"<<" 12:Inverse of Cos"<<endl;
+	cout<<"\t6:Square\t\t"<<" 13:Inverse of Tan"<<endl;
+	cout<<"\t7:Log\t\t\t"<<" 14:Exit"<<endl;
+		}
+		void addition()
+		{
+			cout<<"\nEnter first number : ";
+				cin>>x;
+				cout<<"\nEnter 2nd number : ";
+				cin>>y;
+				cout<<"\nResult = "<<x+y<<endl;
+		}
+		
+		void subtract()
+		
+		{
+			cout<<"\nEnter first number : ";
+				cin>>x;
+				cout<<"\nEnter 2nd number : ";
+				cin>>y;
+				cout<<"\nResult = "<<x-y<<endl;
+		}
+		
+		void multiply()
+		{
+			
+			cout<<"\nEnter first number : ";
+				cin>>x;
+				cout<<"\nEnter 2nd number : ";
+				cin>>y;
+				cout<<"\nResult = "<<x*y<<endl;
+		}
+		
+		
+		void divide()
+{
+	
+	cout<<"\nEnter first number : ";
+				cin>>x;
+				cout<<"\nEnter 2nd number : ";
+				cin>>y;
+				cout<<"\nResult = "<<x/y<<endl;
+}
+      
+      void power()
+      {
+      	cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nEnter the exponent : ";
+				cin>>y;
+				cout<<"\nResult = "<<pow(x,y)<<endl;
+	  }
+	  
+	  void sqrt()
+	  {
+	  		cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<x*x<<endl;
+	  }
+	  
+	  void log(){
+	  	cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<log10(x)<<endl;
+				
+	  }
+	  
+	  void sin1()
+	  {
+cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<sin(x)<<endl;
+				
+	  }
+	  
+	  void cos1()
+	  {
+	  		cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<cos(x)<<endl;
+	  }
+	  
+	  void tan1()
+	  {
+	  	cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<tan(x)<<endl;
+	  }
+	  
+	  void sininverse()
+	  {
+	  	cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<asin(x)*180.0/PI<<endl;
+	  }
+	  
+	  void cosinverse()
+	  {
+	  		cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<acos(x)*180.0/PI<<endl;
+	  }
+	  
+	  void taninverse()
+	  
+	  {
+	  		cout<<"\nEnter the number : ";
+				cin>>x;
+				cout<<"\nResult = "<<atan(x)*180.0/PI<<endl;
+	  }
+	  
+};
+
+int main()
+{
+	scientificcalculator obj1;
+	int option;
+	obj1.userinterface();
+while(true)
+
+{
+	
+	
+	
+	cout<<"\n\n\tEnter the operation you want to do :";
+	cin>>option;
+	
+	int choice;
+	
+	
+	if(option==1)
+	{
+		obj1.addition();
+		
+	}
+	else if(option==2)
+	{
+		
+		obj1.subtract();
+	}
+	else if(option==3)
+	{
+		
+		obj1.multiply();
+	}
+	else if(option==4)
+	
+	{
+		obj1.divide();
+		
+	}
+	
+	else if(option==5)
+	
+	{
+		obj1.power();
+	}
+	
+	else if(option==6)
+	{
+		obj1.sqrt();
+	}
+	else if(option==7)
+	
+	{
+		obj1.log();
+		
+	}
+	else if(option==8)
+	
+	{
+		obj1.sin1();
+	}
+	else if(option==9)
+	
+	{
+		obj1.cos1();
+		
+	}
+	else if(option==10)
+	{
+		
+		obj1.tan1();
+		
+	}
+	else if(option==11){
+		
+		obj1.sininverse();
+		
+	}
+	else if (option==12)
+	
+	{
+		
+		obj1.cosinverse();
+	}
+	else if(option==13)
+	{
+		
+		obj1.taninverse();
+	}
+	
+	else
+	
+	{
+		
+		cout<<"wrong input";
+	}
+}
+
+}
